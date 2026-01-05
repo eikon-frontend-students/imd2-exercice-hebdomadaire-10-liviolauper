@@ -4,10 +4,6 @@
   padding: 0;
 }
 
-a {
-  color: inherit;
-}
-
 img,
 video {
   display: block;
@@ -19,10 +15,8 @@ video {
   flex-direction: column;
   max-width: 440px;
   padding: 30px;
-  justify-content: center;
   align-items: center;
   gap: 30px;
-  flex-shrink: 0;
   border-radius: 20px;
   background: #FFF;
   box-shadow: 0 0 0 20px rgba(255, 254, 254, 0.15);
@@ -44,34 +38,34 @@ video {
   display: flex;
   align-items: center;
   gap: 15px;
-  align-self: stretch;
+  width: 100%;
 }
 
 .player-progress-bar {
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
+  height: 6px;
   border-radius: 3px;
+  flex: 1;
   background: #F6F6EF;
 }
 
 .player-progress-inner {
-  border-radius: 3px;
-  background: #E783BC;
   width: 120px;
-  height: 6px;
+  height: 100%;
+  border-radius: inherit;
 }
 
 .player-button {
-  display: flex;
   width: 74px;
   height: 74px;
-  flex-direction: column;
+  display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 37px;
-  background: #E783BC;
+  border-radius: 50%;
   color: #fff;
+}
+
+.player-progress-inner, .player-button {
+  background: #E783BC;
 }
 
 audio {
@@ -81,9 +75,5 @@ audio {
 body {
   background: #c7d2f2;
   color: #909090;
-  font-family: Inter;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  font-size: 15px;
+  font: 700 15px Inter, sans-serif;
 }
